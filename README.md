@@ -2,6 +2,11 @@ Screenshot:
 
 ![Screenshot from 2023-01-07 00-33-37](https://user-images.githubusercontent.com/52675676/211084998-18588361-f86d-4792-9e3e-f47ff7038af0.png)
 
+Testing Using Karma & Jasmine Framework
+
+![Screenshot from 2023-01-07 02-34-44](https://user-images.githubusercontent.com/52675676/211099893-9106eac8-a5a8-4815-9bfc-e99550b1abfa.png)
+
+
 # EcommerceFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
