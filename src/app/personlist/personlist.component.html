@@ -8,6 +8,7 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Sales Volume</th>
+            <th>Met Requirement?</th>
         </tr>
     </thead>
 
@@ -17,6 +18,10 @@
             <td>{{singleperson.lastname}}</td>
             <td>{{singleperson.email}}</td>
             <td>{{singleperson.salesvolume}}</td>
+            <td>
+                <div *ngIf="singleperson.salesvolume >=700; else myElseBlock">Yes</div>
+                <ng-template #myElseBlock>No</ng-template>
+            </td>
         </tr>
     </tbody>
 
