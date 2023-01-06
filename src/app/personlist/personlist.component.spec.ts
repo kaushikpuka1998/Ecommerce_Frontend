@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppComponent } from '../app.component';
 
 import { PersonlistComponent } from './personlist.component';
 
@@ -8,7 +9,7 @@ describe('PersonlistComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PersonlistComponent ]
+      declarations: [ PersonlistComponent,AppComponent ]
     })
     .compileComponents();
 
@@ -17,7 +18,22 @@ describe('PersonlistComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the app',()=>{
+    const fixture = TestBed.createComponent(PersonlistComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it('testing html table data', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    let tableRows = fixture.nativeElement.querySelectorAll('tr');
+    // expect(compiled.querySelector('td')?.textContent).toContain('kaushikghoshgmail.com');
+
+    expect(tableRows.length).toBe(5);
+
+    let headerRow = tableRows[0];
+    expect(headerRow.cells[1].innerHTML).toBe('Last Name');
+
+    
   });
 });

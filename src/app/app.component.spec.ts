@@ -1,11 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { PersonlistComponent } from './personlist/personlist.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        PersonlistComponent
+
       ],
     }).compileComponents();
   });
@@ -26,6 +29,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Ecommerce_frontend app is running!');
+    expect(compiled.querySelector('span')?.textContent).toContain('Ecommerce_frontend app is running!');
   });
 });
