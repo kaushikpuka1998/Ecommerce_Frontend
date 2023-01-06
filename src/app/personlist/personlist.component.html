@@ -1,0 +1,25 @@
+<p>personlist works!</p>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Sales Volume</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let singleperson of salespersonlist">
+            <td>{{singleperson.firstname}}</td>
+            <td>{{singleperson.lastname}}</td>
+            <td>{{singleperson.email}}</td>
+            <td>{{singleperson.salesvolume}}</td>
+        </tr>
+    </tbody>
+
+
+
+</table>
