@@ -7,6 +7,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th> Total Amount</th>
             <th>Sales Volume</th>
             <th>Met Requirement?</th>
         </tr>
@@ -17,6 +18,7 @@
             <td>{{singleperson.firstname}}</td>
             <td>{{singleperson.lastname}}</td>
             <td>{{singleperson.email}}</td>
+            <td>{{singleperson.salesvolume*150 | currency:'INR'}}</td>
             <td>{{singleperson.salesvolume}}</td>
             <td>
                 <div *ngIf="singleperson.salesvolume >=700; else myElseBlock">Yes</div>
