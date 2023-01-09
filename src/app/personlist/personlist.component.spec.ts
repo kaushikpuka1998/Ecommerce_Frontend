@@ -49,6 +49,19 @@ describe('PersonlistComponent', () => {
 
 
   });
+
+  it('testing html data table check', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    let tableRows = fixture.nativeElement.querySelectorAll('tr');
+    // expect(compiled.querySelector('td')?.textContent).toContain('kaushikghoshgmail.com');
+
+    expect(tableRows.length).toBe(5);
+
+    let headerRow = tableRows[2];
+    expect(headerRow.cells[3].innerHTML).toBe('₹97,500.00');
+
+
+  });
 });
 
 
